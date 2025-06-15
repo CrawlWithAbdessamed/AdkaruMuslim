@@ -8,6 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * mysql users table verification
      */
     public function up(): void
     {
