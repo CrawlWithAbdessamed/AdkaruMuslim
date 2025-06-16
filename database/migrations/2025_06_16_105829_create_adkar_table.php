@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('adkar', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('title');
+            $table->string('content');
+            $table->string('source');
+            $table->string('reward');
+            $table->integer('repeat_count');
+            $table->enum('type', ['morning', 'evening', 'pryer']);
         });
     }
 
