@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * The adkars that belong to the user.
+     */
+    public function adkar(): BelongsToMany
+    {
+        return $this->belongsToMany(Adkar::class);
+    }
 }
