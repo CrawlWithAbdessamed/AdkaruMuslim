@@ -23,6 +23,6 @@ class AdkarFactory extends Factory
             'reward' => fake()->sentence(),
             'repeat_count' => fake()->numberBetween(1, 100),
             'type' => fake()->randomElement(['morning', 'evening', 'pryer']),
-    ];
+        ];
     }
 }

@@ -32,7 +32,7 @@ class UserFactory extends Factory
             'country' => fake()->country(),
             'gender' => fake()->randomElement(['male', 'female']),
             'remember_token' => Str::random(10),
-    ];
+        ];
     }
 
     /**
