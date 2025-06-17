@@ -9,13 +9,13 @@
             </thead>
 
             <tbody>
-                @foreach ($adkars as $adkar)
+                @foreach ($users as $user)
                 <tr>
-                    <td>{{ $adkar->title }}</td>
+                    <td>{{ $user->name }}</td>
                     <td>
                         <ul>
-                            @foreach ($adkar->users as $user)
-                                <li>{{ $user->name }}</li>
+                            @foreach ($user->adkar as $adkar)
+                                <li>{{ $adkar->title }}</li>
                             @endforeach
                         </ul>
                     </td>
