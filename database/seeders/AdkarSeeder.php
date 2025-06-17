@@ -21,4 +21,5 @@ class AdkarSeeder extends Seeder
             $adkar->users()->attach($users);
         }
     }
+    
 }
