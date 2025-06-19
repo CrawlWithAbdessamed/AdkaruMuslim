@@ -18,7 +18,9 @@ class TasbihSeeder extends Seeder
 
         foreach (Tasbih::all() as $tasbih) {
             $users = User::inRandomOrder()->take(rand(1,5))->pluck('id');
-            $tasbih->users()->attach($users);
+            foreach ($users as $userId) {
+                $tasbih->users()->attach($userId, ['date' => now()]);
+            }
         }
     }
 }

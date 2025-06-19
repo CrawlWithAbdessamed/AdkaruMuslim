@@ -18,7 +18,9 @@ class AdkarSeeder extends Seeder
 
         foreach (Adkar::all() as $adkar) {
             $users = User::inRandomOrder()->take(rand(1,20))->pluck('id');
-            $adkar->users()->attach($users);
+            foreach ($users as $userId) {
+                $adkar->users()->attach($userId, ['date' => now()]);
+            }
         }
     }
     
