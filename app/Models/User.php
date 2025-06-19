@@ -50,8 +50,14 @@ class User extends Authenticatable
     /**
      * The adkars that belong to the user.
      */
-    public function adkar(): BelongsToMany
+    public function adkars(): BelongsToMany
     {
         return $this->belongsToMany(Adkar::class);
+    }
+
+    // The tasbihs that belongs to the user
+    public function tasbihs(): belongsToMany 
+    {
+        return $this->belongsToMany(Tasbih::class);
     }
 }
