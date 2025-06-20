@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index']);
+
+// Backend APIs 
