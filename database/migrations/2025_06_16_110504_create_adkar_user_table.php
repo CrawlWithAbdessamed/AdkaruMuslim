@@ -16,11 +16,11 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('adkar_id');
-            $table->date('date');
             
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
-            $table->foreign('adkar_id')->references('id')->on('adkars')->onDelete('cascade');;
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('adkar_id')->references('id')->on('adkars')->onDelete('cascade');
 
+            $table->boolean('completed')->default(false);
             // $table->foreignId('user_id')->constrained();    keep on mind
         });
     }

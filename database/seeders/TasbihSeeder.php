@@ -18,9 +18,7 @@ class TasbihSeeder extends Seeder
 
         foreach (Tasbih::all() as $tasbih) {  // this line iterate on all the 20 tasbih created
             $users = User::inRandomOrder()->take(rand(1,5))->pluck('id');  // here we get a random number of users ID (e.g 3 user_id)
-            foreach ($users as $userId) {
-                $tasbih->users()->attach($userId, ['date' => now()]);   // attach the current tasbih with those 3 users ID in pivot table
-            }
+            $tasbih->users()->attach($users);  // attach the current tasbih with those 3 users ID in pivot table
         }
     }
 }

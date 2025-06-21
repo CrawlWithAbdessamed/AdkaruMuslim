@@ -18,4 +18,11 @@ class AdkarController extends Controller
 
         return Adkar::all();
     }
+
+    public function store(Request $request)
+    {
+        $name = $request->input('name');
+ 
+
+    }
 }
