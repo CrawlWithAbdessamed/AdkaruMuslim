@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('source');
             $table->string('reward');
             $table->integer('repeat_count');
-            $table->enum('type', ['morning', 'evening', 'pryer']);
+            $table->enum('type', ['morning', 'evening', 'prayer']);
         });
     }
 
