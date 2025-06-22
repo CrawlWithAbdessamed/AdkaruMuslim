@@ -14,7 +14,7 @@
                     <td>{{ $user->name }}</td>
                     <td>
                         <ul>
-                            @foreach ($user->adkar as $adkar)
+                            @foreach ($user->adkars as $adkar)
                                 <li>{{ $adkar->title }}</li>
                             @endforeach
                         </ul>

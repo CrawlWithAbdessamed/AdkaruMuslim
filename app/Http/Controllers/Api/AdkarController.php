@@ -17,7 +17,8 @@ class AdkarController extends Controller
             return Adkar::where('type', $type)->get();
         }
 
-        return Adkar::all();
+        // return Adkar::all();
+        return view('adkars.index', compact('adkars'));
     }
 
     public function store(Request $request)

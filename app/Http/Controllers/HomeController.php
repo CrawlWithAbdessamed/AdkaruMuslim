@@ -9,7 +9,7 @@ use App\Models\User;
 class HomeController extends Controller
 {
     public function index() {
-        $users = User::with('adkar')->get();
+        $users = User::with('adkars')->get();
 
         return view('home', compact('users'));
     }
