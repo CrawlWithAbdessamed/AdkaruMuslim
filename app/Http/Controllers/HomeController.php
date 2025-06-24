@@ -13,5 +13,5 @@ class HomeController extends Controller
 
         return view('home', compact('users'));
     }
-    
+    // just a comment mister crawler
 }
