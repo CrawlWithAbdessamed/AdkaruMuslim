@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,16 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AdkarController extends Controller
 {
-    public function index (Request $request) 
+    public function index ($type) 
     {
-        $type = $request->query('type');
-
-        if ($type) {
-            return Adkar::where('type', $type)->get();
-        }
-
-        // return Adkar::all();
-        return view('adkars.index', compact('adkars'));
+        $adkars = Adkar::where('type', $type)->get();
+        return view('index', compact('adkars', 'type'));
     }
 
     public function store(Request $request)
