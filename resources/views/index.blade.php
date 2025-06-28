@@ -6,7 +6,7 @@
             <strong>{{ $adkar->title }}</strong>
             <p>{{ $adkar->content }}</p>
 
-            <form method="POST" action="{{ route('adkar.complete') }}">
+            <form method="POST" action="{{ route('adkars.complete') }}">
                 @csrf
                 <input type="hidden" name="adkar_id" value="{{ $adkar->id }}">
                 <button type="submit">Complete</button>

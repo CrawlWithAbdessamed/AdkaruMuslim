@@ -13,5 +13,3 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::get('/adkars/{type}', [AdkarController::class, 'index']);
 
 Route::post('/adkars/complete', [AdkarController::class, 'store'])->name('adkars.complete');
-
-Route::post('/adkars/complete', [AdkarController::class, 'store'])->name('adkar.complete');
