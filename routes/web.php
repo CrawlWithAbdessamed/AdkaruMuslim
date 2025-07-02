@@ -13,3 +13,4 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::get('/adkars/{type}', [AdkarController::class, 'index']);
 
 Route::post('/adkars/complete', [AdkarController::class, 'store'])->name('adkars.complete');
+// three days without commit !!
